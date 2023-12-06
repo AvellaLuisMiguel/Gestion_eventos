@@ -1,0 +1,32 @@
+GESTOR DE EVENTOS
+
+Este proyecto facilita la gestión de eventos a través de una API mediante peticiones HTTP, implementando los verbos básicos como GET, POST, PUT y DELETE.
+
+Características clave:
+
+Implementa un modelo básico que sigue principios de programación y una arquitectura donde la base de datos MongoDB está alojada en una imagen Docker.
+
+Paquetes necesarios:
+
+go
+Copy code
+"go.mongodb.org/mongo-driver/bson"
+"go.mongodb.org/mongo-driver/mongo"
+"github.com/gin-gonic/gin"
+Requisitos para la ejecución:
+
+Docker
+Go
+Cliente
+
+Proceso de instalación:
+
+1. Descargar el repositorio.
+2. Añadir los paquetes necesarios.
+3. Crear la imagen y ejecutar los siguientes comandos desde una consola ubicada en la carpeta del proyecto:
+	- docker build -t mongodb .
+	- docker run -d -p 27017:27017 --name mo mongodb
+4. Verificar el correcto funcionamiento y ejecución de la imagen.
+5. Ejecutar el comando go run main.go.
+
+autor: Ing. Luis Miguel Avella Avila

@@ -1,0 +1,181 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "title": "API Events",
+      "description": "",
+      "version": "1.0.0"
+    },
+    "host": "localhost:3000",
+    "basePath": "/",
+    "schemes": [
+      "http"
+    ],
+    "paths": {
+      "/events": {
+        "get": {
+          "summary": "",
+          "description": "get all events",
+          "responses": {
+            "200": {
+              "description": "eventResponse",
+              "schema": {
+                "type": "string"
+              }
+            },
+            "400": {
+              "description": "errorResponse",
+              "schema": {
+                "type": "string"
+              }
+            },
+            "500": {
+              "description": "errorResponse",
+              "schema": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "post": {
+          "summary": "",
+          "description": "Add events",
+          "parameters": [
+            {
+                "id_event":"body",
+                "name_event": "body",
+                "description_event": "body",
+                "date_event": "body",
+                "state_event": "body",
+                "clasification_event": "body",
+                "description": "Objeto del evento",
+                "required": true,
+                "schema": {
+                    "$ref": "#/definitions/Event"
+                }
+            }
+        ],
+          "responses": {
+            "200": {
+              "description": "eventResponse",
+              "schema": {
+                "type": "string"
+              }
+            },
+            "400": {
+              "description": "errorResponse",
+              "schema": {
+                "type": "string"
+              }
+            },
+            "500": {
+              "description": "errorResponse",
+              "schema": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      },
+      "/events/:id": {
+        "get": {
+          "summary": "",
+          "description": "get event  by id",
+          "responses": {
+            "200": {
+              "description": "eventResponse",
+              "schema": {
+                "type": "string"
+              }
+            },
+            "400": {
+              "description": "errorResponse",
+              "schema": {
+                "type": "string"
+              }
+            },
+            "500": {
+              "description": "errorResponse",
+              "schema": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "put": {
+          "summary": "",
+          "description": "Update event by id",
+          "responses": {
+            "200": {
+              "description": "eventResponse",
+              "schema": {
+                "type": "string"
+              }
+            },
+            "400": {
+              "description": "errorResponse",
+              "schema": {
+                "type": "string"
+              }
+            },
+            "500": {
+              "description": "errorResponse",
+              "schema": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "delete": {
+          "summary": "",
+          "description": "delete event  by id",
+          "responses": {
+            "200": {
+              "description": "eventResponse",
+              "schema": {
+                "type": "string"
+              }
+            },
+            "400": {
+              "description": "errorResponse",
+              "schema": {
+                "type": "string"
+              }
+            },
+            "500": {
+              "description": "errorResponse",
+              "schema": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      },
+      "/events/:id/:clasification": {
+        "put": {
+          "summary": "",
+          "description": "add clasification event  by id",
+          "responses": {
+            "200": {
+              "description": "eventResponse",
+              "schema": {
+                "type": "string"
+              }
+            },
+            "400": {
+              "description": "errorResponse",
+              "schema": {
+                "type": "string"
+              }
+            },
+            "500": {
+              "description": "errorResponse",
+              "schema": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
